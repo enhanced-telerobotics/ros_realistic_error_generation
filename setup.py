@@ -1,4 +1,6 @@
 from setuptools import setup
+from glob import glob
+import os
 
 package_name = 'realistic_error_injection'
 
@@ -7,9 +9,9 @@ setup(
     version='0.0.0',
     packages=[package_name],
     data_files=[
-        ('share/ament_index/resource_index/packages',
-            ['resource/' + package_name]),
+        ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (f'share/{package_name}/resources/sample_neural_net_dataset4', glob(f'{package_name}/resources/sample_neural_net_dataset4/*')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

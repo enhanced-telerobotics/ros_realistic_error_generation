@@ -1,0 +1,6 @@
+{
+    "dataset_type": "actual-measured",
+    "include_prev_measured": true,
+    "train_size": 2846,
+    "test_size": 742
+}

@@ -4,7 +4,7 @@
   <name>realistic_error_injection</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="jbarrag3@jh.edu">juan95</maintainer>
+  <maintainer email="jbarrag3@jh.edu">Juan Antonio Barragan</maintainer>
   <license>TODO: License declaration</license>
 
   <exec_depend>rclpy</exec_depend>

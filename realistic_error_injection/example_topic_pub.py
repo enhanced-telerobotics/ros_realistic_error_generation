@@ -34,6 +34,7 @@ class MinimalPublisher(Node):
         self.publisher_.publish(msg)
         self.get_logger().info('Publishing: "%s"' % msg.data)
         self.get_logger().info(f'Torch information - version: {torch.__version__} cuda available: {torch.cuda.is_available()}')
+        self.get_logger().info(f'Current path: f{__file__}')
         self.i += 1
 
 
