@@ -27,7 +27,11 @@ def test_pytorch(package_share_directory:Path):
     print(f"weights paths exist? {weights_path.exists()}")
 
     # Load the weights
-    model = torch.load(weights_path)
+    print("test loading model:")
+    model = torch.load(weights_path, weights_only=True)
+
+    print("Test function completed .............")
+    
 
 def simple_inference(package_share_directory: Path):
     noise_generator = load_noise_generator(package_share_directory, 12) 
