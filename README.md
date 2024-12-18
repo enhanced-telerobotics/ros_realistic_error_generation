@@ -8,7 +8,7 @@ Create your ROS 2 workspace and clone all repositories using `vcs`:
 source /opt/ros/galactic/setup.bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-vcs import --input https://raw.githubusercontent.com/jhu-saw/vcs/main/ros2-dvrk-2.3.0.vcs --recursive
+vcs import --input https://raw.githubusercontent.com/surgical-robotics-ai/realistic_robot_error_injection/refs/heads/main/ros2-error-injection-devel.repos.yaml  
 ```
 
 Compile using `colcon`
