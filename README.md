@@ -1,12 +1,12 @@
 # Realistic robot error injection - ROS Package
 
-Table of contents
 - [Realistic robot error injection - ROS Package](#realistic-robot-error-injection---ros-package)
   - [Usage](#usage)
   - [Setup](#setup)
     - [Python dependencies](#python-dependencies)
     - [Install in ROS2 worskpace](#install-in-ros2-worskpace)
     - [Install in ROS1 workspace](#install-in-ros1-workspace)
+  - [Citation](#citation)
 
 ## Usage
 
@@ -53,3 +53,16 @@ export PYTHONPATH=~/venvs/pytorch_ros/lib/python3.8/site-packages:$PYTHONPATH
 ### Install in ROS1 workspace
 
 TODO
+
+## Citation
+
+```
+@misc{barragan2024improving,
+      title={Improving the realism of robotic surgery simulation through injection of learning-based estimated errors}, 
+      author={Juan Antonio Barragan and Hisashi Ishida and Adnan Munawar and Peter Kazanzides},
+      year={2024},
+      eprint={2406.07375},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}
+}
+```
