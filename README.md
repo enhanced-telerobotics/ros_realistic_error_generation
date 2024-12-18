@@ -10,7 +10,15 @@
 
 ## Usage
 
-TODO
+Run error generation server
+```
+ros2 run realistic_error_injection error_generator_srv
+```
+
+Using the error server from the command line
+```
+ros2 service call /ObtainError error_injection_interfaces/srv/ObtainError
+```
 
 ## Setup
 

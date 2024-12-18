@@ -24,6 +24,7 @@ setup(
         'console_scripts': [
             'talker = realistic_error_injection.example_topic_pub:main',
             'test_torch = realistic_error_injection.test_pytorch:main',
+            'error_generator_srv = realistic_error_injection.error_generator_srv:main',
         ],
     },
 )
