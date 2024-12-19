@@ -5,15 +5,8 @@ from sensor_msgs.msg import JointState
 import numpy as np 
 from kincalib.Learning.NoiseGenerator import NetworkNoiseGenerator
 from realistic_error_injection.utils import load_noise_generator, get_path_to_torch_model
+from realistic_error_injection.utils import numpy2msg, msg2numpy
 
-def msg2numpy(msg: JointState)->np.ndarray:
-    return np.array([msg.position])
-
-def numpy2msg(arr: np.ndarray)->JointState:
-    joint_state_msg = JointState()
-    
-    joint_state_msg.position = arr.tolist() 
-    return JointState(position=arr) 
 
 class ErrorGeneratorService(Node):
 
@@ -26,7 +19,7 @@ class ErrorGeneratorService(Node):
         self.srv = self.create_service(ObtainError, 'ObtainError', self.obtain_error_callback)
 
 
-    def obtain_error_callback(self, request, response):
+    def obtain_error_callback(self, request: ObtainError.Request, response: ObtainError.Response):
         '''
         Service definition for reference
 
@@ -36,9 +29,17 @@ class ErrorGeneratorService(Node):
         response.success: bool
         ''' 
 
-        previous_jp = [[0.2, 0.2, 0.125, 0.2, 0.2, 0.2]]
-        sample_jp = [[0.2, 0.2, 0.125, 0.2, 0.2, 0.2]]
-        corrupted_jp, offset = self.noise_generator.corrupt_jp_batch(sample_jp, previous_jp, self.cfg)
+        # previous_jp = [[0.2, 0.2, 0.125, 0.2, 0.2, 0.2]]
+        # sample_jp = [[0.2, 0.2, 0.125, 0.2, 0.2, 0.2]]
+
+        previous_js = msg2numpy(request.previous_js)
+        current_js = msg2numpy(request.current_js)
+
+        # Add batch dimension
+        previous_js = np.expand_dims(previous_js, axis=0)
+        current_js =  np.expand_dims(current_js, axis=0)
+
+        corrupted_js, offset = self.noise_generator.corrupt_jp_batch(current_js, previous_js, self.cfg)
 
         offset = offset[0] # remove batch dimension
 

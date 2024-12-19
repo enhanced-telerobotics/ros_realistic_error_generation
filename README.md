@@ -15,7 +15,12 @@ Run error generation server
 ros2 run realistic_error_injection error_generator_srv
 ```
 
-Using the error server from the command line
+Run example client
+```
+ros2 run realistic_error_injection example_client 
+```
+
+Using the error server from the command line (NOT WORKING YET)
 ```
 ros2 service call /ObtainError error_injection_interfaces/srv/ObtainError
 ```

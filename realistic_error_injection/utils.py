@@ -2,6 +2,18 @@ from pathlib import Path
 from typing import Dict, Tuple
 from kincalib.Learning.NoiseGenerator import NetworkNoiseGenerator
 import json
+from sensor_msgs.msg import JointState
+import numpy as np
+
+
+def msg2numpy(msg: JointState) -> np.ndarray:
+    return np.array(msg.position)
+
+def numpy2msg(arr: np.ndarray) -> JointState:
+    joint_state_msg = JointState()
+
+    joint_state_msg.position = arr.tolist()
+    return JointState(position=arr)
 
 
 def load_noise_generator(
