@@ -1,15 +1,15 @@
 repositories:
-    error-injection/realistic_error_injection:
+    error-generation/realistic_error_generation:
         type: git
-        url: https://github.com/surgical-robotics-ai/realistic_robot_error_injection.git 
+        url: https://github.com/surgical-robotics-ai/ros_realistic_error_generation.git 
         version: main
 
-    error-injection/error_injection_interfaces:
+    error-generation/realistic_error_generation_interfaces:
         type: git
-        url: https://github.com/surgical-robotics-ai/error_injection_interfaces.git 
+        url: https://github.com/surgical-robotics-ai/ros_realistic_error_generation_interfaces.git
         version: main
 
     dvrk_kinematic_calibration:
         type: git
         url: https://github.com/jabarragann/KinematicCalibDVRK.git 
-        version: main 
+        version: v0.0.0 

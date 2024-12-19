@@ -1,4 +1,4 @@
-# Realistic robot error injection - ROS Package
+# Realistic robot error generation - ROS Package
 
 - [Realistic robot error injection - ROS Package](#realistic-robot-error-injection---ros-package)
   - [Usage](#usage)
