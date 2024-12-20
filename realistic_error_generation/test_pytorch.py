@@ -2,7 +2,7 @@ from ament_index_python.packages import get_package_share_directory
 import torch
 from kincalib.Learning.NoiseGenerator import NetworkNoiseGenerator
 from pathlib import Path
-from realistic_error_injection.utils import (
+from realistic_error_generation.utils import (
     load_noise_generator,
     get_path_to_torch_model,
 )

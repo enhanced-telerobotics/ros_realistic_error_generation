@@ -1,15 +1,15 @@
 import sys
 import rclpy
 from rclpy.node import Node
-from realistic_error_injection.utils import numpy2msg
-from error_injection_interfaces.srv import ObtainError
+from realistic_error_generation.utils import numpy2msg
+from realistic_error_generation_interfaces.srv import ObtainError
 import numpy as np
 
 
 class MinimalClientAsync(Node):
 
     def __init__(self):
-        super().__init__("error_injection_client")
+        super().__init__("error_generation_client")
         self.cli = self.create_client(ObtainError, "ObtainError")
 
         while not self.cli.wait_for_service(timeout_sec=1.0):

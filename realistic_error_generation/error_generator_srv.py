@@ -1,9 +1,9 @@
 import rclpy
 from rclpy.node import Node
 import numpy as np 
-from realistic_error_injection.utils import load_noise_generator, get_path_to_torch_model
-from realistic_error_injection.utils import numpy2msg, msg2numpy
-from error_injection_interfaces.srv import ObtainError
+from realistic_error_generation.utils import load_noise_generator, get_path_to_torch_model
+from realistic_error_generation.utils import numpy2msg, msg2numpy
+from realistic_error_generation_interfaces.srv import ObtainError
 
 
 class ErrorGeneratorService(Node):

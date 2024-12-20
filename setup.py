@@ -2,7 +2,7 @@ from setuptools import setup
 from glob import glob
 import os
 
-package_name = 'realistic_error_injection'
+package_name = 'realistic_error_generation'
 
 setup(
     name=package_name,
@@ -22,10 +22,10 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'example_pub = realistic_error_injection.example_topic_pub:main',
-            'test_torch = realistic_error_injection.test_pytorch:main',
-            'error_generator_srv = realistic_error_injection.error_generator_srv:main',
-            'example_client = realistic_error_injection.example_error_generator_client:main'
+            'example_pub = realistic_error_generation.example_topic_pub:main',
+            'test_torch = realistic_error_generation.test_pytorch:main',
+            'error_generator_srv = realistic_error_generation.error_generator_srv:main',
+            'example_client = realistic_error_generation.example_error_generator_client:main'
         ],
     },
 )

@@ -48,7 +48,7 @@ def get_path_to_torch_model() -> Path:
     from ament_index_python.packages import get_package_share_directory
 
     package_share_directory = Path(
-        get_package_share_directory("realistic_error_injection")
+        get_package_share_directory("realistic_error_generation")
     )
 
     package_share_directory = (

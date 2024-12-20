@@ -1,6 +1,6 @@
 # Realistic robot error generation - ROS Package
 
-- [Realistic robot error injection - ROS Package](#realistic-robot-error-injection---ros-package)
+- [Realistic robot error generation - ROS Package](#realistic-robot-error-generation---ros-package)
   - [Usage](#usage)
   - [Setup](#setup)
     - [Python dependencies](#python-dependencies)
@@ -12,17 +12,17 @@
 
 Run error generation server
 ```
-ros2 run realistic_error_injection error_generator_srv
+ros2 run realistic_error_generation error_generator_srv
 ```
 
 Run example client
 ```
-ros2 run realistic_error_injection example_client 
+ros2 run realistic_error_generation example_client 
 ```
 
 Using the error server from the command line (NOT WORKING YET)
 ```
-ros2 service call /ObtainError error_injection_interfaces/srv/ObtainError
+ros2 service call /ObtainError realistic_error_generation_interfaces/srv/ObtainError
 ```
 
 ## Setup
@@ -50,7 +50,7 @@ Create your ROS 2 workspace and clone all repositories using `vcs`:
 source /opt/ros/galactic/setup.bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-vcs import --input https://raw.githubusercontent.com/surgical-robotics-ai/realistic_robot_error_injection/refs/heads/main/ros2-error-injection-devel.repos.yaml  
+vcs import --input https://raw.githubusercontent.com/surgical-robotics-ai/realistic_error_generation/refs/heads/main/ros2-error-generation-devel.repos.yaml  
 ```
 
 Compile using `colcon`
